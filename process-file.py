@@ -1,4 +1,0 @@
-import re
-
-help(re)
-
