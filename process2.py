@@ -7,7 +7,7 @@ with codecs.open('input.txt', 'r', 'utf-8') as fin:
 
 result = re.sub(r'\s*[;:?]\s*', ' ; ', contents)
 
-result = re.sub(r' ; (шт.|кг|м|кор.)', '', result)
+result = re.sub(r'; \b(шт\.|кг|м|кор\.)\s*', '', result)
 
 fout = codecs.open('result.txt', 'w', 'utf-8')
 fout.write(result)
